@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Investment Calculator — Luxit Digital</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="Get an investment estimate for your digital project with Luxit Digital. We build scalable, long-term systems for growth and reliability." />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      WebFont.load({ google: { families: ["Anek Malayalam:100,200,300,regular,500,600,700,800"] } });
+    </script>
+    <link href="https://cdn.prod.website-files.com/658388b7514ee2b319ea06cc/6636bbf275521e23c9fe9d77_favicon-32x32.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://cdn.prod.website-files.com/658388b7514ee2b319ea06cc/6636cc6f9ae2bec8b5d2a6af_luxit_logo.png" rel="apple-touch-icon" />
+    <style>
+      /* ── Inline styles for this page's unique elements ── */
+
+      /* Premium notice bar */
+      .calc-notice {
+        background: linear-gradient(120deg, rgba(255,111,76,0.08), rgba(68,84,254,0.08));
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        padding: 14px 5vw;
+        text-align: center;
+      }
+      .calc-notice p {
+        color: #c2c2c2;
+        font-size: 13px;
+        font-weight: 300;
+        font-family: Anek Malayalam, sans-serif;
+        margin: 0;
+        line-height: 1.6em;
+      }
+      .calc-notice strong {
+        color: #fff;
+        font-weight: 500;
+      }
+
+      /* Card-style radio for Section 1 */
+      .calc-radio-card-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .calc-radio-card-opt {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        cursor: pointer;
+        padding: 14px 18px;
+        background: rgba(255,255,255,0.02);
+        border: 1px solid rgba(255,255,255,0.06);
+        transition: all 0.2s;
+      }
+      .calc-radio-card-opt:hover {
+        background: rgba(255,255,255,0.05);
+        border-color: rgba(255,255,255,0.12);
+      }
+      .calc-radio-card-opt:has(input[type="radio"]:checked) {
+        background: rgba(255,111,76,0.06);
+        border-color: rgba(255,111,76,0.25);
+      }
+      .calc-radio-card-opt input[type="radio"] { display: none; }
+      .calc-radio-card-title {
+        color: #e2e2e2;
+        font-size: 15px;
+        font-weight: 400;
+        font-family: Anek Malayalam, sans-serif;
+        line-height: 1.3em;
+      }
+      .calc-radio-card-desc {
+        color: #666;
+        font-size: 12px;
+        font-weight: 300;
+        font-family: Anek Malayalam, sans-serif;
+        margin-top: 3px;
+      }
+      .calc-radio-card-opt:has(input[type="radio"]:checked) .calc-radio-card-title {
+        color: #fff;
+      }
+
+      /* Range display in results panel */
+      .calc-range-label {
+        color: #888;
+        font-size: 12px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-family: Anek Malayalam, sans-serif;
+        margin-bottom: 10px;
+      }
+      .calc-range-value {
+        font-size: 30px;
+        font-weight: 600;
+        background: linear-gradient(120deg, #ff6f4c, #4454fe);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-family: Anek Malayalam, sans-serif;
+        line-height: 1.15em;
+        margin-bottom: 6px;
+        word-break: break-word;
+      }
+      .calc-range-currency {
+        color: #555;
+        font-size: 12px;
+        font-weight: 300;
+        font-family: Anek Malayalam, sans-serif;
+        margin-bottom: 20px;
+      }
+      .calc-range-placeholder {
+        color: #444;
+        font-size: 14px;
+        font-weight: 300;
+        font-style: italic;
+        font-family: Anek Malayalam, sans-serif;
+        margin-bottom: 20px;
+        min-height: 48px;
+      }
+
+      /* Selection summary */
+      .calc-summary {
+        margin-bottom: 20px;
+      }
+      .calc-summary-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 7px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        gap: 10px;
+      }
+      .calc-summary-key {
+        color: #666;
+        font-size: 12px;
+        font-weight: 300;
+        font-family: Anek Malayalam, sans-serif;
+        flex-shrink: 0;
+      }
+      .calc-summary-val {
+        color: #c2c2c2;
+        font-size: 12px;
+        font-weight: 400;
+        font-family: Anek Malayalam, sans-serif;
+        text-align: right;
+      }
+
+      /* Budget alignment */
+      .calc-budget-section {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+      }
+      .calc-budget-label {
+        color: #c2c2c2;
+        font-size: 13px;
+        font-weight: 400;
+        font-family: Anek Malayalam, sans-serif;
+        margin-bottom: 12px;
+        line-height: 1.5em;
+      }
+      .calc-budget-radio {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+      .calc-budget-opt {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        padding: 9px 12px;
+        border: 1px solid rgba(255,255,255,0.06);
+        background: rgba(255,255,255,0.02);
+        transition: all 0.18s;
+      }
+      .calc-budget-opt:hover { background: rgba(255,255,255,0.05); }
+      .calc-budget-opt:has(input:checked) {
+        border-color: rgba(255,111,76,0.3);
+        background: rgba(255,111,76,0.05);
+      }
+      .calc-budget-opt input { display: none; }
+      .calc-budget-dot {
+        width: 14px;
+        height: 14px;
+        border: 2px solid rgba(255,255,255,0.2);
+        border-radius: 50%;
+        flex-shrink: 0;
+        position: relative;
+        transition: border-color 0.18s;
+      }
+      .calc-budget-dot::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: linear-gradient(135deg, #ff6f4c, #4454fe);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.18s;
+      }
+      .calc-budget-opt:has(input:checked) .calc-budget-dot { border-color: #ff6f4c; }
+      .calc-budget-opt:has(input:checked) .calc-budget-dot::after { transform: translate(-50%, -50%) scale(1); }
+      .calc-budget-opt-label {
+        color: #c2c2c2;
+        font-size: 13px;
+        font-weight: 300;
+        font-family: Anek Malayalam, sans-serif;
+      }
+
+      /* MVP message */
+      .calc-mvp-msg {
+        display: none;
+        background: rgba(68,84,254,0.08);
+        border: 1px solid rgba(68,84,254,0.2);
+        padding: 14px 16px;
+        margin-bottom: 16px;
+      }
+      .calc-mvp-msg p {
+        color: #c2c2c2;
+        font-size: 13px;
+        font-weight: 300;
+        font-family: Anek Malayalam, sans-serif;
+        margin: 0;
+        line-height: 1.6em;
+      }
+      .calc-mvp-msg strong {
+        color: #fff;
+        font-weight: 500;
+      }
+
+      /* Disclaimer */
+      .calc-disclaimer {
+        color: #444;
+        font-size: 11px;
+        font-weight: 300;
+        font-family: Anek Malayalam, sans-serif;
+        line-height: 1.6em;
+        margin-top: 18px;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        padding-top: 14px;
+      }
+
+      /* Mobile bar two-value layout */
+      .calc-mobile-range {
+        font-size: 16px;
+        font-weight: 600;
+        background: linear-gradient(120deg, #ff6f4c, #4454fe);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-family: Anek Malayalam, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="body-1">
+    <div class="page-wrapper calc-page-wrapper">
+
+      <!-- NAVBAR -->
+      <div role="banner" class="navbar w-nav">
+        <div class="navigation-wrapper">
+          <div class="navigation-container" style="height: 70px;">
+            <a href="/" title="Return to Main Page" class="home w-inline-block">
+              <div>Luxit <span class="site-name-text-span">Digital</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PREMIUM NOTICE -->
+      <div class="calc-notice">
+        <p><strong>Luxit Digital does not compete on lowest price.</strong> We build scalable, long-term systems designed for growth and reliability.</p>
+      </div>
+
+      <!-- HERO -->
+      <div class="section-wrapper glow-3">
+        <div class="calc-hero">
+          <div class="calc-hero-tag">Investment Calculator</div>
+          <h1>Estimate Your <span>Project Investment</span></h1>
+          <p>Answer seven questions to receive an investment range. This is a strategic estimate — final pricing is confirmed after a technical discovery call.</p>
+        </div>
+      </div>
+
+      <!-- CALCULATOR LAYOUT -->
+      <div class="calc-layout">
+
+        <!-- FORM COLUMN -->
+        <div class="calc-form-col">
+
+          <!-- SECTION 1: Project Category -->
+          <div class="calc-section open" id="sec-category">
+            <div class="calc-section-header" onclick="toggleSection('sec-category')">
+              <div class="calc-section-header-left">
+                <div class="calc-section-num">01</div>
+                <div>
+                  <div class="calc-section-title">What Are You Building?</div>
+                  <div class="calc-section-subtitle">Select the project type that best fits your vision</div>
+                </div>
+              </div>
+              <div class="calc-section-chevron">&#8964;</div>
+            </div>
+            <div class="calc-section-body">
+              <div class="calc-radio-card-group">
+
+                <label class="calc-radio-card-opt">
+                  <input type="radio" name="project-type" value="website" onchange="onCategoryChange(this)" />
+                  <span class="calc-radio-dot"></span>
+                  <span>
+                    <div class="calc-radio-card-title">Business Website</div>
+                    <div class="calc-radio-card-desc">Professional online presence, landing pages, portfolio or corporate site</div>
+                  </span>
+                </label>
+
+                <label class="calc-radio-card-opt">
+                  <input type="radio" name="project-type" value="ecommerce" onchange="onCategoryChange(this)" />
+                  <span class="calc-radio-dot"></span>
+                  <span>
+                    <div class="calc-radio-card-title">E-Commerce Platform</div>
+                    <div class="calc-radio-card-desc">Online store with product listings, cart, payments, and order management</div>
+                  </span>
+                </label>
+
+                <label class="calc-radio-card-opt">
+                  <input type="radio" name="project-type" value="webapp" onchange="onCategoryChange(this)" />
+                  <span class="calc-radio-dot"></span>
+                  <span>
+                    <div class="calc-radio-card-title">Custom Web Application</div>
+                    <div class="calc-radio-card-desc">SaaS platform, client portal, or dashboard with complex business logic</div>
+                  </span>
+                </label>
+
+                <label class="calc-radio-card-opt">
+                  <input type="radio" name="project-type" value="mobile" onchange="onCategoryChange(this)" />
+                  <span class="calc-radio-dot"></span>
+                  <span>
+                    <div class="calc-radio-card-title">Mobile App</div>
+                    <div class="calc-radio-card-desc">Native or cross-platform iOS &amp; Android application</div>
+                  </span>
+                </label>
+
+                <label class="calc-radio-card-opt">
+                  <input type="radio" name="project-type" value="internal" onchange="onCategoryChange(this)" />
+                  <span class="calc-radio-dot"></span>
+                  <span>
+                    <div class="calc-radio-card-title">Internal Business System</div>
+                    <div class="calc-radio-card-desc">Operations tool, CRM, inventory system, or workflow automation</div>
+                  </span>
+                </label>
+
+                <label class="calc-radio-card-opt">
+                  <input type="radio" name="project-type" value="ai" onchange="onCategoryChange(this)" />
+                  <span class="calc-radio-dot"></span>
+                  <span>
+                    <div class="calc-radio-card-title">AI-Enabled Solution</div>
+                    <div class="calc-radio-card-desc">Product or feature powered by LLMs, machine learning, or intelligent automation</div>
+                  </span>
+                </label>
+
+                <label class="calc-radio-card-opt">
+                  <input type="radio" name="project-type" value="notsure" onchange="onCategoryChange(this)" />
+                  <span class="calc-radio-dot"></span>
+                  <span>
+                    <div class="calc-radio-card-title">Not Sure — Need Guidance</div>
+                    <div class="calc-radio-card-desc">I have an idea but need help defining the right technical approach</div>
+                  </span>
+                </label>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 2: Business Stage -->
+          <div class="calc-section open" id="sec-stage">
+            <div class="calc-section-header" onclick="toggleSection('sec-stage')">
+              <div class="calc-section-header-left">
+                <div class="calc-section-num">02</div>
+                <div>
+                  <div class="calc-section-title">Business Stage</div>
+                  <div class="calc-section-subtitle">Where is your business right now?</div>
+                </div>
+              </div>
+              <div class="calc-section-chevron">&#8964;</div>
+            </div>
+            <div class="calc-section-body">
+              <div class="calc-radio-group">
+                <label class="calc-radio-option">
+                  <input type="radio" name="biz-stage" value="early" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">Early-stage / New business</span>
+                  </span>
+                </label>
+                <label class="calc-radio-option">
+                  <input type="radio" name="biz-stage" value="growing" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">Growing &amp; scaling</span>
+                  </span>
+                </label>
+                <label class="calc-radio-option">
+                  <input type="radio" name="biz-stage" value="established" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">Established business optimizing operations</span>
+                  </span>
+                </label>
+                <label class="calc-radio-option">
+                  <input type="radio" name="biz-stage" value="rebuilding" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">Rebuilding / replacing an existing system</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 3: Scope & Complexity (dynamic) -->
+          <div class="calc-section open" id="sec-scope">
+            <div class="calc-section-header" onclick="toggleSection('sec-scope')">
+              <div class="calc-section-header-left">
+                <div class="calc-section-num">03</div>
+                <div>
+                  <div class="calc-section-title">Scope &amp; Complexity</div>
+                  <div class="calc-section-subtitle">How large is the project?</div>
+                </div>
+              </div>
+              <div class="calc-section-chevron">&#8964;</div>
+            </div>
+            <div class="calc-section-body">
+
+              <!-- Website scope (shown for website / ecommerce / notsure) -->
+              <div id="scope-website" class="calc-conditional visible">
+                <div class="calc-field-heading">Pages &amp; structure</div>
+                <div class="calc-radio-group">
+                  <label class="calc-radio-option">
+                    <input type="radio" name="scope-web" value="web-sm" onchange="recalc()" />
+                    <span class="calc-radio-dot"></span>
+                    <span class="calc-radio-text">
+                      <span class="calc-radio-label">1–3 core pages</span>
+                      <span class="calc-radio-price">focused scope</span>
+                    </span>
+                  </label>
+                  <label class="calc-radio-option">
+                    <input type="radio" name="scope-web" value="web-md" onchange="recalc()" />
+                    <span class="calc-radio-dot"></span>
+                    <span class="calc-radio-text">
+                      <span class="calc-radio-label">4–8 structured pages</span>
+                      <span class="calc-radio-price">standard scope</span>
+                    </span>
+                  </label>
+                  <label class="calc-radio-option">
+                    <input type="radio" name="scope-web" value="web-lg" onchange="recalc()" />
+                    <span class="calc-radio-dot"></span>
+                    <span class="calc-radio-text">
+                      <span class="calc-radio-label">9–20 pages</span>
+                      <span class="calc-radio-price">expanded scope</span>
+                    </span>
+                  </label>
+                  <label class="calc-radio-option">
+                    <input type="radio" name="scope-web" value="web-xl" onchange="recalc()" />
+                    <span class="calc-radio-dot"></span>
+                    <span class="calc-radio-text">
+                      <span class="calc-radio-label">20+ pages / complex structure</span>
+                      <span class="calc-radio-price">large scope</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- App scope (shown for webapp / mobile / internal / ai) -->
+              <div id="scope-app" class="calc-conditional">
+                <div class="calc-field-heading">System size &amp; maturity</div>
+                <div class="calc-radio-group">
+                  <label class="calc-radio-option">
+                    <input type="radio" name="scope-app" value="app-mvp" onchange="recalc()" />
+                    <span class="calc-radio-dot"></span>
+                    <span class="calc-radio-text">
+                      <span class="calc-radio-label">MVP — core feature set only</span>
+                      <span class="calc-radio-price">lean scope</span>
+                    </span>
+                  </label>
+                  <label class="calc-radio-option">
+                    <input type="radio" name="scope-app" value="app-v1" onchange="recalc()" />
+                    <span class="calc-radio-dot"></span>
+                    <span class="calc-radio-text">
+                      <span class="calc-radio-label">Production-ready v1</span>
+                      <span class="calc-radio-price">standard scope</span>
+                    </span>
+                  </label>
+                  <label class="calc-radio-option">
+                    <input type="radio" name="scope-app" value="app-multi" onchange="recalc()" />
+                    <span class="calc-radio-dot"></span>
+                    <span class="calc-radio-text">
+                      <span class="calc-radio-label">Multi-role system (admin, users, etc.)</span>
+                      <span class="calc-radio-price">expanded scope</span>
+                    </span>
+                  </label>
+                  <label class="calc-radio-option">
+                    <input type="radio" name="scope-app" value="app-platform" onchange="recalc()" />
+                    <span class="calc-radio-dot"></span>
+                    <span class="calc-radio-text">
+                      <span class="calc-radio-label">Platform-level system</span>
+                      <span class="calc-radio-price">large scope</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- SECTION 4: Feature Requirements -->
+          <div class="calc-section open" id="sec-features">
+            <div class="calc-section-header" onclick="toggleSection('sec-features')">
+              <div class="calc-section-header-left">
+                <div class="calc-section-num">04</div>
+                <div>
+                  <div class="calc-section-title">Feature Requirements</div>
+                  <div class="calc-section-subtitle">Select all that apply to your project</div>
+                </div>
+              </div>
+              <div class="calc-section-chevron">&#8964;</div>
+            </div>
+            <div class="calc-section-body">
+
+              <div class="calc-field-heading">Core features</div>
+              <div class="calc-checkbox-group">
+                <label class="calc-checkbox-option">
+                  <input type="checkbox" name="feature" value="auth" onchange="recalc()" />
+                  <span class="calc-checkbox-box"></span>
+                  <span class="calc-checkbox-text">
+                    <span class="calc-checkbox-label">Authentication / User accounts</span>
+                  </span>
+                </label>
+                <label class="calc-checkbox-option">
+                  <input type="checkbox" name="feature" value="admin" onchange="recalc()" />
+                  <span class="calc-checkbox-box"></span>
+                  <span class="calc-checkbox-text">
+                    <span class="calc-checkbox-label">Admin dashboard</span>
+                  </span>
+                </label>
+                <label class="calc-checkbox-option">
+                  <input type="checkbox" name="feature" value="payment" onchange="recalc()" />
+                  <span class="calc-checkbox-box"></span>
+                  <span class="calc-checkbox-text">
+                    <span class="calc-checkbox-label">Payment processing</span>
+                  </span>
+                </label>
+                <label class="calc-checkbox-option">
+                  <input type="checkbox" name="feature" value="subscription" onchange="recalc()" />
+                  <span class="calc-checkbox-box"></span>
+                  <span class="calc-checkbox-text">
+                    <span class="calc-checkbox-label">Subscription billing</span>
+                  </span>
+                </label>
+                <label class="calc-checkbox-option">
+                  <input type="checkbox" name="feature" value="realtime" onchange="recalc()" />
+                  <span class="calc-checkbox-box"></span>
+                  <span class="calc-checkbox-text">
+                    <span class="calc-checkbox-label">Real-time updates</span>
+                  </span>
+                </label>
+                <label class="calc-checkbox-option">
+                  <input type="checkbox" name="feature" value="fileupload" onchange="recalc()" />
+                  <span class="calc-checkbox-box"></span>
+                  <span class="calc-checkbox-text">
+                    <span class="calc-checkbox-label">File uploads</span>
+                  </span>
+                </label>
+                <label class="calc-checkbox-option">
+                  <input type="checkbox" name="feature" value="integrations" onchange="recalc()" />
+                  <span class="calc-checkbox-box"></span>
+                  <span class="calc-checkbox-text">
+                    <span class="calc-checkbox-label">Third-party integrations</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="calc-sub-divider"></div>
+
+              <div class="calc-field-heading">Advanced features</div>
+              <div class="calc-checkbox-group">
+                <label class="calc-checkbox-option">
+                  <input type="checkbox" name="feature" value="ai" onchange="recalc()" />
+                  <span class="calc-checkbox-box"></span>
+                  <span class="calc-checkbox-text">
+                    <span class="calc-checkbox-label">AI integration</span>
+                  </span>
+                </label>
+                <label class="calc-checkbox-option">
+                  <input type="checkbox" name="feature" value="customapi" onchange="recalc()" />
+                  <span class="calc-checkbox-box"></span>
+                  <span class="calc-checkbox-text">
+                    <span class="calc-checkbox-label">Custom API development</span>
+                  </span>
+                </label>
+                <label class="calc-checkbox-option">
+                  <input type="checkbox" name="feature" value="multirole" onchange="recalc()" />
+                  <span class="calc-checkbox-box"></span>
+                  <span class="calc-checkbox-text">
+                    <span class="calc-checkbox-label">Multi-role permission system</span>
+                  </span>
+                </label>
+                <label class="calc-checkbox-option">
+                  <input type="checkbox" name="feature" value="multilang" onchange="recalc()" />
+                  <span class="calc-checkbox-box"></span>
+                  <span class="calc-checkbox-text">
+                    <span class="calc-checkbox-label">Multi-language support</span>
+                  </span>
+                </label>
+                <label class="calc-checkbox-option">
+                  <input type="checkbox" name="feature" value="automation" onchange="recalc()" />
+                  <span class="calc-checkbox-box"></span>
+                  <span class="calc-checkbox-text">
+                    <span class="calc-checkbox-label">Background processes / automation</span>
+                  </span>
+                </label>
+                <label class="calc-checkbox-option">
+                  <input type="checkbox" name="feature" value="cloudinfra" onchange="recalc()" />
+                  <span class="calc-checkbox-box"></span>
+                  <span class="calc-checkbox-text">
+                    <span class="calc-checkbox-label">Cloud infrastructure setup</span>
+                  </span>
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- SECTION 5: Design Level -->
+          <div class="calc-section open" id="sec-design">
+            <div class="calc-section-header" onclick="toggleSection('sec-design')">
+              <div class="calc-section-header-left">
+                <div class="calc-section-num">05</div>
+                <div>
+                  <div class="calc-section-title">Design Expectations</div>
+                  <div class="calc-section-subtitle">What level of design quality do you need?</div>
+                </div>
+              </div>
+              <div class="calc-section-chevron">&#8964;</div>
+            </div>
+            <div class="calc-section-body">
+              <div class="calc-radio-group">
+                <label class="calc-radio-option">
+                  <input type="radio" name="design-level" value="clean" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">Clean professional UI</span>
+                  </span>
+                </label>
+                <label class="calc-radio-option">
+                  <input type="radio" name="design-level" value="brand" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">Custom brand-aligned design</span>
+                  </span>
+                </label>
+                <label class="calc-radio-option">
+                  <input type="radio" name="design-level" value="designsystem" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">Full design system + UX strategy</span>
+                  </span>
+                </label>
+                <label class="calc-radio-option">
+                  <input type="radio" name="design-level" value="uxresearch" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">Conversion-focused UX with research</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 6: Timeline -->
+          <div class="calc-section open" id="sec-timeline">
+            <div class="calc-section-header" onclick="toggleSection('sec-timeline')">
+              <div class="calc-section-header-left">
+                <div class="calc-section-num">06</div>
+                <div>
+                  <div class="calc-section-title">Desired Timeline</div>
+                  <div class="calc-section-subtitle">When do you need this delivered?</div>
+                </div>
+              </div>
+              <div class="calc-section-chevron">&#8964;</div>
+            </div>
+            <div class="calc-section-body">
+              <div class="calc-radio-group">
+                <label class="calc-radio-option">
+                  <input type="radio" name="timeline" value="flexible" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">Flexible — best investment value</span>
+                  </span>
+                </label>
+                <label class="calc-radio-option">
+                  <input type="radio" name="timeline" value="normal" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">2–3 months</span>
+                  </span>
+                </label>
+                <label class="calc-radio-option">
+                  <input type="radio" name="timeline" value="fast" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">4–6 weeks — fast-track build</span>
+                  </span>
+                </label>
+                <label class="calc-radio-option">
+                  <input type="radio" name="timeline" value="urgent" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">Urgent / priority build</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 7: Ongoing Partnership -->
+          <div class="calc-section open" id="sec-partnership">
+            <div class="calc-section-header" onclick="toggleSection('sec-partnership')">
+              <div class="calc-section-header-left">
+                <div class="calc-section-num">07</div>
+                <div>
+                  <div class="calc-section-title">Ongoing Partnership</div>
+                  <div class="calc-section-subtitle">What kind of relationship are you looking for?</div>
+                </div>
+              </div>
+              <div class="calc-section-chevron">&#8964;</div>
+            </div>
+            <div class="calc-section-body">
+              <div class="calc-radio-group">
+                <label class="calc-radio-option">
+                  <input type="radio" name="partnership" value="onetime" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">One-time project</span>
+                  </span>
+                </label>
+                <label class="calc-radio-option">
+                  <input type="radio" name="partnership" value="maintenance" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">Monthly maintenance &amp; support</span>
+                  </span>
+                </label>
+                <label class="calc-radio-option">
+                  <input type="radio" name="partnership" value="longterm" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">Long-term technical partner</span>
+                  </span>
+                </label>
+                <label class="calc-radio-option">
+                  <input type="radio" name="partnership" value="roadmap" onchange="recalc()" />
+                  <span class="calc-radio-dot"></span>
+                  <span class="calc-radio-text">
+                    <span class="calc-radio-label">Ongoing feature roadmap</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /calc-form-col -->
+
+        <!-- RESULTS COLUMN -->
+        <div class="calc-results-col">
+          <div class="calc-results-panel">
+            <div class="calc-results-title">Estimated Investment Range</div>
+
+            <!-- Range output -->
+            <div id="range-placeholder" class="calc-range-placeholder">
+              Select a project type to see your investment range.
+            </div>
+            <div id="range-output" style="display:none;">
+              <div class="calc-range-label">Similar Luxit Digital projects typically fall between</div>
+              <div class="calc-range-value" id="range-value">—</div>
+              <div class="calc-range-currency">CAD · tax not included</div>
+            </div>
+
+            <!-- Selections summary -->
+            <div class="calc-summary" id="summary-block" style="display:none;">
+              <div class="calc-divider" style="margin-top:0;"></div>
+              <div class="calc-summary-row" id="sum-category" style="display:none;">
+                <span class="calc-summary-key">Category</span>
+                <span class="calc-summary-val" id="sum-category-val">—</span>
+              </div>
+              <div class="calc-summary-row" id="sum-scope" style="display:none;">
+                <span class="calc-summary-key">Scope</span>
+                <span class="calc-summary-val" id="sum-scope-val">—</span>
+              </div>
+              <div class="calc-summary-row" id="sum-features" style="display:none;">
+                <span class="calc-summary-key">Features</span>
+                <span class="calc-summary-val" id="sum-features-val">—</span>
+              </div>
+              <div class="calc-summary-row" id="sum-design" style="display:none;">
+                <span class="calc-summary-key">Design</span>
+                <span class="calc-summary-val" id="sum-design-val">—</span>
+              </div>
+              <div class="calc-summary-row" id="sum-timeline" style="display:none;">
+                <span class="calc-summary-key">Timeline</span>
+                <span class="calc-summary-val" id="sum-timeline-val">—</span>
+              </div>
+            </div>
+
+            <!-- Budget alignment -->
+            <div class="calc-budget-section" id="budget-section" style="display:none;">
+              <div class="calc-budget-label">How does this align with your budget?</div>
+              <div class="calc-budget-radio">
+                <label class="calc-budget-opt">
+                  <input type="radio" name="budget-align" value="aligns" onchange="onBudgetChange(this)" />
+                  <span class="calc-budget-dot"></span>
+                  <span class="calc-budget-opt-label">My budget aligns with this range</span>
+                </label>
+                <label class="calc-budget-opt">
+                  <input type="radio" name="budget-align" value="discuss" onchange="onBudgetChange(this)" />
+                  <span class="calc-budget-dot"></span>
+                  <span class="calc-budget-opt-label">I'd like to discuss adjustments</span>
+                </label>
+                <label class="calc-budget-opt">
+                  <input type="radio" name="budget-align" value="exceeds" onchange="onBudgetChange(this)" />
+                  <span class="calc-budget-dot"></span>
+                  <span class="calc-budget-opt-label">This exceeds our current budget</span>
+                </label>
+              </div>
+
+              <!-- MVP message -->
+              <div class="calc-mvp-msg" id="mvp-msg">
+                <p>We occasionally offer reduced-scope <strong>MVP builds starting at $3,000+</strong>. Would you like to explore a phased approach where we launch lean and grow the product iteratively?</p>
+              </div>
+
+              <a href="/#Get-in-touch" class="calc-cta">
+                <span class="calc-cta-inner" id="cta-text">Get My Custom Proposal</span>
+              </a>
+            </div>
+
+            <!-- Always-visible CTA before range is shown -->
+            <div id="cta-early">
+              <a href="/#Get-in-touch" class="calc-cta" style="margin-top:8px;">
+                <span class="calc-cta-inner">Book a Discovery Call</span>
+              </a>
+            </div>
+
+            <div class="calc-disclaimer">
+              This is an investment estimate, not a quote. Final pricing is confirmed after technical discovery.
+            </div>
+          </div>
+
+          <div style="margin-top:16px;text-align:center;">
+            <a href="media-calculator.html" style="color:#4454fe;font-size:13px;font-weight:300;font-family:Anek Malayalam,sans-serif;">
+              Need content &amp; media production pricing? &#8594;
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /calc-layout -->
+
+      <!-- MOBILE TOTAL BAR -->
+      <div class="calc-mobile-bar">
+        <div class="calc-mobile-bar-row">
+          <div>
+            <div class="calc-mobile-total-label">Investment range</div>
+            <div class="calc-mobile-range" id="mobile-range">Select options above</div>
+          </div>
+          <a href="/#Get-in-touch" class="calc-mobile-cta">
+            <span class="calc-mobile-cta-inner">Get Proposal</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div style="margin-top: 100px;">
+        <div class="footer-wrapper">
+          <div class="footer-container">
+            <a href="/" title="Return to Main Page" class="home footer w-inline-block">
+              <div>Luxit <span class="site-name-text-span">Digital</span></div>
+            </a>
+            <div>Copyright &copy; Luxit Digital</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrapper -->
+
+    <script type="text/javascript">
+      /* =============================================
+         INVESTMENT CALCULATOR — LUXIT DIGITAL
+         ============================================= */
+
+      var PRICES = {
+        base: {
+          website:   2500,
+          ecommerce: 4000,
+          webapp:    8000,
+          mobile:    12000,
+          internal:  6000,
+          ai:        10000,
+          notsure:   2500
+        },
+        scope: {
+          'web-sm':       1.0,
+          'web-md':       1.2,
+          'web-lg':       1.4,
+          'web-xl':       1.6,
+          'app-mvp':      1.0,
+          'app-v1':       1.2,
+          'app-multi':    1.4,
+          'app-platform': 1.6
+        },
+        features: {
+          auth:         800,
+          admin:        1200,
+          payment:      1500,
+          subscription: 2000,
+          realtime:     1500,
+          fileupload:   500,
+          integrations: 800,
+          ai:           3000,
+          customapi:    2000,
+          multirole:    1500,
+          multilang:    1000,
+          automation:   1500,
+          cloudinfra:   1200
+        },
+        design: {
+          clean:        1.0,
+          brand:        1.15,
+          designsystem: 1.3,
+          uxresearch:   1.4
+        },
+        rush: {
+          flexible: 1.0,
+          normal:   1.0,
+          fast:     1.25,
+          urgent:   1.4
+        }
+      };
+
+      var LABELS = {
+        category: {
+          website:   'Business Website',
+          ecommerce: 'E-Commerce Platform',
+          webapp:    'Custom Web App',
+          mobile:    'Mobile App',
+          internal:  'Internal Business System',
+          ai:        'AI-Enabled Solution',
+          notsure:   'Not yet defined'
+        },
+        scope: {
+          'web-sm':       '1–3 pages',
+          'web-md':       '4–8 pages',
+          'web-lg':       '9–20 pages',
+          'web-xl':       '20+ pages',
+          'app-mvp':      'MVP',
+          'app-v1':       'Production-ready v1',
+          'app-multi':    'Multi-role system',
+          'app-platform': 'Platform-level'
+        },
+        design: {
+          clean:        'Clean professional UI',
+          brand:        'Custom brand-aligned',
+          designsystem: 'Full design system',
+          uxresearch:   'Conversion-focused UX'
+        },
+        timeline: {
+          flexible: 'Flexible',
+          normal:   '2–3 months',
+          fast:     'Fast-track (4–6 wks)',
+          urgent:   'Urgent / priority'
+        }
+      };
+
+      function getRadio(name) {
+        var el = document.querySelector('input[name="' + name + '"]:checked');
+        return el ? el.value : null;
+      }
+
+      function getChecked(name) {
+        return Array.from(document.querySelectorAll('input[name="' + name + '"]:checked')).map(function(el) { return el.value; });
+      }
+
+      function toggleSection(id) {
+        document.getElementById(id).classList.toggle('open');
+      }
+
+      function show(id) { document.getElementById(id).style.display = ''; }
+      function hide(id) { document.getElementById(id).style.display = 'none'; }
+
+      function onCategoryChange(radio) {
+        var appTypes = ['webapp', 'mobile', 'internal', 'ai'];
+        var isApp = appTypes.indexOf(radio.value) !== -1;
+
+        // Toggle scope options
+        if (isApp) {
+          document.getElementById('scope-website').classList.remove('visible');
+          document.getElementById('scope-app').classList.add('visible');
+          // Clear website scope selection
+          document.querySelectorAll('input[name="scope-web"]').forEach(function(el) { el.checked = false; });
+        } else {
+          document.getElementById('scope-app').classList.remove('visible');
+          document.getElementById('scope-website').classList.add('visible');
+          // Clear app scope selection
+          document.querySelectorAll('input[name="scope-app"]').forEach(function(el) { el.checked = false; });
+        }
+
+        recalc();
+      }
+
+      function onBudgetChange(radio) {
+        var mvpMsg = document.getElementById('mvp-msg');
+        var ctaText = document.getElementById('cta-text');
+        if (radio.value === 'exceeds') {
+          mvpMsg.style.display = 'block';
+          ctaText.textContent = 'Explore a Phased Approach';
+        } else if (radio.value === 'discuss') {
+          mvpMsg.style.display = 'none';
+          ctaText.textContent = 'Let\'s Discuss Your Budget';
+        } else {
+          mvpMsg.style.display = 'none';
+          ctaText.textContent = 'Get My Custom Proposal';
+        }
+      }
+
+      function fmtNum(n) {
+        return '$' + Math.round(n).toLocaleString('en-US');
+      }
+
+      function recalc() {
+        var category  = getRadio('project-type');
+        var scopeWeb  = getRadio('scope-web');
+        var scopeApp  = getRadio('scope-app');
+        var scope     = scopeWeb || scopeApp;
+        var features  = getChecked('feature');
+        var design    = getRadio('design-level');
+        var timeline  = getRadio('timeline');
+
+        // ── Update summary rows regardless ──
+        if (category) {
+          document.getElementById('sum-category-val').textContent = LABELS.category[category] || category;
+          show('sum-category');
+        }
+        if (scope) {
+          document.getElementById('sum-scope-val').textContent = LABELS.scope[scope] || scope;
+          show('sum-scope');
+        }
+        if (features.length > 0) {
+          document.getElementById('sum-features-val').textContent = features.length + ' selected';
+          show('sum-features');
+        }
+        if (design) {
+          document.getElementById('sum-design-val').textContent = LABELS.design[design] || design;
+          show('sum-design');
+        }
+        if (timeline) {
+          document.getElementById('sum-timeline-val').textContent = LABELS.timeline[timeline] || timeline;
+          show('sum-timeline');
+        }
+        if (category || scope || design || timeline) {
+          show('summary-block');
+        }
+
+        // ── Need at least a category to show a range ──
+        if (!category) {
+          hide('range-output');
+          show('range-placeholder');
+          hide('budget-section');
+          show('cta-early');
+          document.getElementById('mobile-range').textContent = 'Select options above';
+          return;
+        }
+
+        var base         = PRICES.base[category] || 2500;
+        var scopeMult    = scope ? (PRICES.scope[scope] || 1.0) : 1.0;
+        var featureTotal = features.reduce(function(sum, f) { return sum + (PRICES.features[f] || 0); }, 0);
+        var designMult   = design   ? (PRICES.design[design]   || 1.0) : 1.0;
+        var rushMult     = timeline ? (PRICES.rush[timeline]   || 1.0) : 1.0;
+
+        var midpoint = (base * scopeMult + featureTotal) * designMult * rushMult;
+
+        // Round to nearest $500, apply variance band
+        var low  = Math.round(midpoint * 0.82 / 500) * 500;
+        var high = Math.round(midpoint * 1.22 / 500) * 500;
+
+        // Ensure minimum sensible gap
+        if (high - low < 1000) high = low + 1000;
+
+        var rangeStr = fmtNum(low) + ' – ' + fmtNum(high);
+
+        document.getElementById('range-value').textContent = rangeStr;
+        hide('range-placeholder');
+        show('range-output');
+        show('budget-section');
+        hide('cta-early');
+        document.getElementById('mobile-range').textContent = rangeStr;
+      }
+
+      // Mobile hamburger
+      document.getElementById('calc-burger').addEventListener('click', function() {
+        var menu = document.querySelector('.nav-menu');
+        var isOpen = menu.style.display === 'flex';
+        menu.style.display = isOpen ? '' : 'flex';
+        if (!isOpen) {
+          menu.style.flexDirection = 'column';
+          menu.style.position = 'fixed';
+          menu.style.top = '65px';
+          menu.style.left = '0';
+          menu.style.right = '0';
+          menu.style.background = 'rgba(20,21,32,0.98)';
+          menu.style.padding = '20px 5vw';
+          menu.style.zIndex = '998';
+          menu.style.gap = '16px';
+        }
+      });
+
+      recalc();
+    </script>
+  </body>
+</html>
