@@ -908,11 +908,14 @@
       function calcAdMgmtFee(budget) {
         if (budget <= 0) return 0;
         var fee = 0;
-        var tier1 = Math.min(budget, 4000);
-        var tier2 = Math.max(0, budget - 4000);
-        fee += tier1 * 0.2;
-        fee += tier2 * 0.15;
-        return fee;
+
+        if (budget <= 4000) {
+          return budget * 0.23;
+        } else if (budget <= 6000) {
+          return budget * 0.18;
+        } else {
+          return budget * 0.13;
+        }
       }
 
       function mediaRecalc() {
