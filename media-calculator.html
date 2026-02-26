@@ -1,27 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Content & Media Pricing — Luxit Digital</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta name="description" content="Calculate the cost of your content and media production package with Luxit Digital. Filming, editing, AI video, advertising management, and social media." />
+    <meta
+      name="description"
+      content="Calculate the cost of your content and media production package with Luxit Digital. Filming, editing, AI video, advertising management, and social media."
+    />
     <link href="styles.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <link
+      href="https://fonts.gstatic.com"
+      rel="preconnect"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+      type="text/javascript"
+    ></script>
     <script type="text/javascript">
-      WebFont.load({ google: { families: ["Anek Malayalam:100,200,300,regular,500,600,700,800"] } });
+      WebFont.load({
+        google: {
+          families: ["Anek Malayalam:100,200,300,regular,500,600,700,800"],
+        },
+      });
     </script>
-    <link href="https://cdn.prod.website-files.com/658388b7514ee2b319ea06cc/6636bbf275521e23c9fe9d77_favicon-32x32.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="https://cdn.prod.website-files.com/658388b7514ee2b319ea06cc/6636cc6f9ae2bec8b5d2a6af_luxit_logo.png" rel="apple-touch-icon" />
+    <link
+      href="https://cdn.prod.website-files.com/658388b7514ee2b319ea06cc/6636bbf275521e23c9fe9d77_favicon-32x32.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.prod.website-files.com/658388b7514ee2b319ea06cc/6636cc6f9ae2bec8b5d2a6af_luxit_logo.png"
+      rel="apple-touch-icon"
+    />
   </head>
   <body class="body-1">
     <div class="page-wrapper calc-page-wrapper">
-
       <!-- NAVBAR -->
       <div role="banner" class="navbar w-nav">
         <div class="navigation-wrapper">
-          <div class="navigation-container" style="height: 70px;">
+          <div class="navigation-container" style="height: 70px">
             <a href="/" title="Return to Main Page" class="home w-inline-block">
               <div>Luxit <span class="site-name-text-span">Digital</span></div>
             </a>
@@ -34,35 +54,52 @@
         <div class="calc-hero">
           <div class="calc-hero-tag">Content & Media Calculator</div>
           <h1>Price Your <span>Content Package</span></h1>
-          <p>Configure your content production, strategy, advertising management, and social media needs to get an instant estimate.</p>
+          <p>
+            Configure your content production, strategy, advertising management,
+            and social media needs to get an instant estimate.
+          </p>
         </div>
       </div>
 
       <!-- CALCULATOR LAYOUT -->
       <div class="calc-layout">
-
         <!-- LEFT: FORM -->
         <div class="calc-form-col">
-
           <!-- SECTION 1: Content Production -->
           <div class="calc-section open" id="sec-production">
-            <div class="calc-section-header" onclick="toggleSection('sec-production')">
+            <div
+              class="calc-section-header"
+              onclick="toggleSection('sec-production')"
+            >
               <div class="calc-section-header-left">
                 <div class="calc-section-num">01</div>
                 <div>
                   <div class="calc-section-title">Content Production</div>
-                  <div class="calc-section-subtitle">Video, photo, and AI-generated assets</div>
+                  <div class="calc-section-subtitle">
+                    Video, photo, and AI-generated assets
+                  </div>
                 </div>
               </div>
               <div class="calc-section-chevron">&#8964;</div>
             </div>
             <div class="calc-section-body">
-
               <ul class="calc-scope-list">
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Professional on-location filming with full equipment setup</li>
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Color grading, sound design, and motion graphics included</li>
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Raw files delivered within 48 hours of shoot</li>
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Drone footage and B-roll available on request</li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Professional on-location
+                  filming with full equipment setup
+                </li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Color grading, sound
+                  design, and motion graphics included
+                </li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Raw files delivered within
+                  48 hours of shoot
+                </li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Drone footage and B-roll
+                  available on request
+                </li>
               </ul>
 
               <div class="calc-field-heading">Video content</div>
@@ -80,15 +117,34 @@
                   max="10"
                   step="1"
                   value="0"
-                  oninput="updateSlider(this, 'filming-val', function(v){ return v + ' hr' + (v==1?'':'s'); }); mediaRecalc()"
+                  oninput="
+                    updateSlider(this, 'filming-val', function (v) {
+                      return v + ' hr' + (v == 1 ? '' : 's');
+                    });
+                    mediaRecalc();
+                  "
                 />
-                <div style="color:#666;font-size:12px;font-weight:300;margin-top:6px;font-family:Anek Malayalam,sans-serif;">$220 per hour</div>
+                <div
+                  style="
+                    color: #666;
+                    font-size: 12px;
+                    font-weight: 300;
+                    margin-top: 6px;
+                    font-family:
+                      Anek Malayalam,
+                      sans-serif;
+                  "
+                >
+                  $220 per hour
+                </div>
               </div>
 
               <div class="calc-slider-group">
                 <div class="calc-slider-row">
                   <span class="calc-slider-label">Video clips to edit</span>
-                  <span class="calc-slider-value" id="videoedit-val">0 clips</span>
+                  <span class="calc-slider-value" id="videoedit-val"
+                    >0 clips</span
+                  >
                 </div>
                 <input
                   type="range"
@@ -98,9 +154,26 @@
                   max="16"
                   step="1"
                   value="0"
-                  oninput="updateSlider(this, 'videoedit-val', function(v){ return v + ' clip' + (v==1?'':'s'); }); mediaRecalc()"
+                  oninput="
+                    updateSlider(this, 'videoedit-val', function (v) {
+                      return v + ' clip' + (v == 1 ? '' : 's');
+                    });
+                    mediaRecalc();
+                  "
                 />
-                <div style="color:#666;font-size:12px;font-weight:300;margin-top:6px;font-family:Anek Malayalam,sans-serif;">$170 per clip</div>
+                <div
+                  style="
+                    color: #666;
+                    font-size: 12px;
+                    font-weight: 300;
+                    margin-top: 6px;
+                    font-family:
+                      Anek Malayalam,
+                      sans-serif;
+                  "
+                >
+                  $170 per clip
+                </div>
               </div>
 
               <div class="calc-sub-divider"></div>
@@ -109,8 +182,12 @@
 
               <div class="calc-slider-group">
                 <div class="calc-slider-row">
-                  <span class="calc-slider-label">In-person photo shoot hours</span>
-                  <span class="calc-slider-value" id="photoshoot-val">0 hrs</span>
+                  <span class="calc-slider-label"
+                    >In-person photo shoot hours</span
+                  >
+                  <span class="calc-slider-value" id="photoshoot-val"
+                    >0 hrs</span
+                  >
                 </div>
                 <input
                   type="range"
@@ -120,15 +197,34 @@
                   max="10"
                   step="1"
                   value="0"
-                  oninput="updateSlider(this, 'photoshoot-val', function(v){ return v + ' hr' + (v==1?'':'s'); }); mediaRecalc()"
+                  oninput="
+                    updateSlider(this, 'photoshoot-val', function (v) {
+                      return v + ' hr' + (v == 1 ? '' : 's');
+                    });
+                    mediaRecalc();
+                  "
                 />
-                <div style="color:#666;font-size:12px;font-weight:300;margin-top:6px;font-family:Anek Malayalam,sans-serif;">$120 per hour</div>
+                <div
+                  style="
+                    color: #666;
+                    font-size: 12px;
+                    font-weight: 300;
+                    margin-top: 6px;
+                    font-family:
+                      Anek Malayalam,
+                      sans-serif;
+                  "
+                >
+                  $120 per hour
+                </div>
               </div>
 
               <div class="calc-slider-group">
                 <div class="calc-slider-row">
                   <span class="calc-slider-label">Photos to edit</span>
-                  <span class="calc-slider-value" id="photoedit-val">0 photos</span>
+                  <span class="calc-slider-value" id="photoedit-val"
+                    >0 photos</span
+                  >
                 </div>
                 <input
                   type="range"
@@ -138,9 +234,26 @@
                   max="16"
                   step="1"
                   value="0"
-                  oninput="updateSlider(this, 'photoedit-val', function(v){ return v + ' photo' + (v==1?'':'s'); }); mediaRecalc()"
+                  oninput="
+                    updateSlider(this, 'photoedit-val', function (v) {
+                      return v + ' photo' + (v == 1 ? '' : 's');
+                    });
+                    mediaRecalc();
+                  "
                 />
-                <div style="color:#666;font-size:12px;font-weight:300;margin-top:6px;font-family:Anek Malayalam,sans-serif;">$80 per photo</div>
+                <div
+                  style="
+                    color: #666;
+                    font-size: 12px;
+                    font-weight: 300;
+                    margin-top: 6px;
+                    font-family:
+                      Anek Malayalam,
+                      sans-serif;
+                  "
+                >
+                  $80 per photo
+                </div>
               </div>
 
               <div class="calc-sub-divider"></div>
@@ -149,8 +262,12 @@
 
               <div class="calc-slider-group">
                 <div class="calc-slider-row">
-                  <span class="calc-slider-label">AI-generated video assets</span>
-                  <span class="calc-slider-value" id="aivideo-val">0 assets</span>
+                  <span class="calc-slider-label"
+                    >AI-generated video assets</span
+                  >
+                  <span class="calc-slider-value" id="aivideo-val"
+                    >0 assets</span
+                  >
                 </div>
                 <input
                   type="range"
@@ -160,15 +277,36 @@
                   max="16"
                   step="1"
                   value="0"
-                  oninput="updateSlider(this, 'aivideo-val', function(v){ return v + ' asset' + (v==1?'':'s'); }); mediaRecalc()"
+                  oninput="
+                    updateSlider(this, 'aivideo-val', function (v) {
+                      return v + ' asset' + (v == 1 ? '' : 's');
+                    });
+                    mediaRecalc();
+                  "
                 />
-                <div style="color:#666;font-size:12px;font-weight:300;margin-top:6px;font-family:Anek Malayalam,sans-serif;">$320 per asset</div>
+                <div
+                  style="
+                    color: #666;
+                    font-size: 12px;
+                    font-weight: 300;
+                    margin-top: 6px;
+                    font-family:
+                      Anek Malayalam,
+                      sans-serif;
+                  "
+                >
+                  $320 per asset
+                </div>
               </div>
 
               <div class="calc-slider-group">
                 <div class="calc-slider-row">
-                  <span class="calc-slider-label">Short-form stories to edit</span>
-                  <span class="calc-slider-value" id="stories-val">0 stories</span>
+                  <span class="calc-slider-label"
+                    >Short-form stories to edit</span
+                  >
+                  <span class="calc-slider-value" id="stories-val"
+                    >0 stories</span
+                  >
                 </div>
                 <input
                   type="range"
@@ -178,39 +316,79 @@
                   max="50"
                   step="1"
                   value="0"
-                  oninput="updateSlider(this, 'stories-val', function(v){ return v + ' stor' + (v==1?'y':'ies'); }); mediaRecalc()"
+                  oninput="
+                    updateSlider(this, 'stories-val', function (v) {
+                      return v + ' stor' + (v == 1 ? 'y' : 'ies');
+                    });
+                    mediaRecalc();
+                  "
                 />
-                <div style="color:#666;font-size:12px;font-weight:300;margin-top:6px;font-family:Anek Malayalam,sans-serif;">$15 per story</div>
+                <div
+                  style="
+                    color: #666;
+                    font-size: 12px;
+                    font-weight: 300;
+                    margin-top: 6px;
+                    font-family:
+                      Anek Malayalam,
+                      sans-serif;
+                  "
+                >
+                  $15 per story
+                </div>
               </div>
-
             </div>
           </div>
 
           <!-- SECTION 2: Content Strategy -->
           <div class="calc-section open" id="sec-strategy">
-            <div class="calc-section-header" onclick="toggleSection('sec-strategy')">
+            <div
+              class="calc-section-header"
+              onclick="toggleSection('sec-strategy')"
+            >
               <div class="calc-section-header-left">
                 <div class="calc-section-num">02</div>
                 <div>
                   <div class="calc-section-title">Content Strategy</div>
-                  <div class="calc-section-subtitle">Ideation, angles, and posting strategy</div>
+                  <div class="calc-section-subtitle">
+                    Ideation, angles, and posting strategy
+                  </div>
                 </div>
               </div>
               <div class="calc-section-chevron">&#8964;</div>
             </div>
             <div class="calc-section-body">
-
               <ul class="calc-scope-list">
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Brainstorming scripts and create content strategies</li>
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Identify Target audience and customer journey mapping</li>
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Competitive analysis and market trends research</li>
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Campaign planning with suggestions for seasonal events</li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Brainstorming scripts and
+                  create content strategies
+                </li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Identify Target audience
+                  and customer journey mapping
+                </li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Competitive analysis and
+                  market trends research
+                </li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Campaign planning with
+                  suggestions for seasonal events
+                </li>
               </ul>
 
-              <div class="calc-field-heading">Monthly content ideas package</div>
+              <div class="calc-field-heading">
+                Monthly content ideas package
+              </div>
               <div class="calc-radio-group">
                 <label class="calc-radio-option">
-                  <input type="radio" name="strategy-pkg" value="none" checked onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="strategy-pkg"
+                    value="none"
+                    checked
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
                     <span class="calc-radio-label">No strategy package</span>
@@ -218,7 +396,12 @@
                   </span>
                 </label>
                 <label class="calc-radio-option">
-                  <input type="radio" name="strategy-pkg" value="pkg8" onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="strategy-pkg"
+                    value="pkg8"
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
                     <span class="calc-radio-label">8 content ideas</span>
@@ -226,7 +409,12 @@
                   </span>
                 </label>
                 <label class="calc-radio-option">
-                  <input type="radio" name="strategy-pkg" value="pkg12" onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="strategy-pkg"
+                    value="pkg12"
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
                     <span class="calc-radio-label">12 content ideas</span>
@@ -234,7 +422,12 @@
                   </span>
                 </label>
                 <label class="calc-radio-option">
-                  <input type="radio" name="strategy-pkg" value="pkg16" onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="strategy-pkg"
+                    value="pkg16"
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
                     <span class="calc-radio-label">16 content ideas</span>
@@ -242,7 +435,12 @@
                   </span>
                 </label>
                 <label class="calc-radio-option">
-                  <input type="radio" name="strategy-pkg" value="pkg24" onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="strategy-pkg"
+                    value="pkg24"
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
                     <span class="calc-radio-label">24 content ideas</span>
@@ -250,36 +448,57 @@
                   </span>
                 </label>
               </div>
-
             </div>
           </div>
 
           <!-- SECTION 3: Advertising Management -->
           <div class="calc-section open" id="sec-admanage">
-            <div class="calc-section-header" onclick="toggleSection('sec-admanage')">
+            <div
+              class="calc-section-header"
+              onclick="toggleSection('sec-admanage')"
+            >
               <div class="calc-section-header-left">
                 <div class="calc-section-num">03</div>
                 <div>
                   <div class="calc-section-title">Advertising Management</div>
-                  <div class="calc-section-subtitle">Budget allocation and platform management</div>
+                  <div class="calc-section-subtitle">
+                    Budget allocation and platform management
+                  </div>
                 </div>
               </div>
               <div class="calc-section-chevron">&#8964;</div>
             </div>
             <div class="calc-section-body">
-
+              <p>
+                This ad spend budget is not included in the monthly services.
+                The ad spend budget is client-managed and paid for separately.
+              </p>
               <ul class="calc-scope-list">
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Full campaign setup, A/B testing, and creative direction</li>
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Weekly performance reports with actionable insights</li>
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Budget pacing and bid optimisation handled daily</li>
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Retargeting and lookalike audience configuration</li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Full campaign setup, A/B
+                  testing, and creative direction
+                </li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Weekly performance reports
+                  with actionable insights
+                </li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Budget pacing and bid
+                  optimisation handled daily
+                </li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Retargeting and lookalike
+                  audience configuration
+                </li>
               </ul>
 
               <div class="calc-field-heading">Monthly advertising budget</div>
               <div class="calc-slider-group">
                 <div class="calc-slider-row">
                   <span class="calc-slider-label">Total spend on paid ads</span>
-                  <span class="calc-slider-value" id="mediabudget-val">$2000</span>
+                  <span class="calc-slider-value" id="mediabudget-val"
+                    >$2000</span
+                  >
                 </div>
                 <input
                   type="range"
@@ -289,11 +508,28 @@
                   max="6000"
                   step="100"
                   value="0"
-                  oninput="updateSlider(this, 'mediabudget-val', function(v){ return '$' + Number(v).toLocaleString(); }); mediaRecalc()"
+                  oninput="
+                    updateSlider(this, 'mediabudget-val', function (v) {
+                      return '$' + Number(v).toLocaleString();
+                    });
+                    mediaRecalc();
+                  "
                 />
               </div>
-              <p style="color:#666;font-size:12px;font-weight:300;margin-top:-8px;margin-bottom:20px;font-family:Anek Malayalam,sans-serif;">
-                Tiered management fee: 23% on first $4,000 · 18% on $4,001–$6,000 · 13% on $6,000+
+              <p
+                style="
+                  color: #666;
+                  font-size: 12px;
+                  font-weight: 300;
+                  margin-top: -8px;
+                  margin-bottom: 20px;
+                  font-family:
+                    Anek Malayalam,
+                    sans-serif;
+                "
+              >
+                Tiered management fee: 23% on first $4,000 · 18% on
+                $4,001–$6,000 · 13% on $6,000+
               </p>
 
               <div class="calc-sub-divider"></div>
@@ -301,7 +537,13 @@
               <div class="calc-field-heading">Platforms for ad management</div>
               <div class="calc-radio-group">
                 <label class="calc-radio-option">
-                  <input type="radio" name="ad-platforms" value="none" checked onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="ad-platforms"
+                    value="none"
+                    checked
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
                     <span class="calc-radio-label">No ad management</span>
@@ -309,15 +551,27 @@
                   </span>
                 </label>
                 <label class="calc-radio-option">
-                  <input type="radio" name="ad-platforms" value="meta" onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="ad-platforms"
+                    value="meta"
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
-                    <span class="calc-radio-label">Meta Ads only (Facebook &amp; Instagram)</span>
+                    <span class="calc-radio-label"
+                      >Meta Ads only (Facebook &amp; Instagram)</span
+                    >
                     <span class="calc-radio-price">+$0 platform fee</span>
                   </span>
                 </label>
                 <label class="calc-radio-option">
-                  <input type="radio" name="ad-platforms" value="google" onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="ad-platforms"
+                    value="google"
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
                     <span class="calc-radio-label">Google Ads only</span>
@@ -325,7 +579,12 @@
                   </span>
                 </label>
                 <label class="calc-radio-option">
-                  <input type="radio" name="ad-platforms" value="google-meta" onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="ad-platforms"
+                    value="google-meta"
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
                     <span class="calc-radio-label">Meta + Google Ads</span>
@@ -333,7 +592,12 @@
                   </span>
                 </label>
                 <label class="calc-radio-option">
-                  <input type="radio" name="ad-platforms" value="all" onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="ad-platforms"
+                    value="all"
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
                     <span class="calc-radio-label">Meta + Google + TikTok</span>
@@ -341,7 +605,6 @@
                   </span>
                 </label>
               </div>
-
             </div>
           </div>
 
@@ -352,32 +615,58 @@
                 <div class="calc-section-num">04</div>
                 <div>
                   <div class="calc-section-title">Social Media Management</div>
-                  <div class="calc-section-subtitle">Community management and publishing</div>
+                  <div class="calc-section-subtitle">
+                    Community management and publishing
+                  </div>
                 </div>
               </div>
               <div class="calc-section-chevron">&#8964;</div>
             </div>
             <div class="calc-section-body">
-
               <ul class="calc-scope-list">
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Daily monitoring, comment replies, and DM management</li>
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Consistent brand voice maintained across all platforms</li>
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Monthly analytics report with growth benchmarks</li>
-                <li class="calc-scope-item"><span class="calc-scope-dot"></span>Hashtag research and content publishing included</li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Daily monitoring, comment
+                  replies, and DM management
+                </li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Consistent brand voice
+                  maintained across all platforms
+                </li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Monthly analytics report
+                  with growth benchmarks
+                </li>
+                <li class="calc-scope-item">
+                  <span class="calc-scope-dot"></span>Hashtag research and
+                  content publishing included
+                </li>
               </ul>
 
               <div class="calc-field-heading">Social platforms to manage</div>
               <div class="calc-radio-group">
                 <label class="calc-radio-option">
-                  <input type="radio" name="smm-platforms" value="none" checked onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="smm-platforms"
+                    value="none"
+                    checked
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
-                    <span class="calc-radio-label">No social media management</span>
+                    <span class="calc-radio-label"
+                      >No social media management</span
+                    >
                     <span class="calc-radio-price">—</span>
                   </span>
                 </label>
                 <label class="calc-radio-option">
-                  <input type="radio" name="smm-platforms" value="one" onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="smm-platforms"
+                    value="one"
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
                     <span class="calc-radio-label">Instagram, Facebook</span>
@@ -385,27 +674,40 @@
                   </span>
                 </label>
                 <label class="calc-radio-option">
-                  <input type="radio" name="smm-platforms" value="two" onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="smm-platforms"
+                    value="two"
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
-                    <span class="calc-radio-label">Instagram, Facebook, TikTok or Google</span>
+                    <span class="calc-radio-label"
+                      >Instagram, Facebook, TikTok or Google</span
+                    >
                     <span class="calc-radio-price">$700/mo</span>
                   </span>
                 </label>
                 <label class="calc-radio-option">
-                  <input type="radio" name="smm-platforms" value="three" onchange="mediaRecalc()" />
+                  <input
+                    type="radio"
+                    name="smm-platforms"
+                    value="three"
+                    onchange="mediaRecalc()"
+                  />
                   <span class="calc-radio-dot"></span>
                   <span class="calc-radio-text">
-                    <span class="calc-radio-label">Instagram, Facebook, TikTok, Google</span>
+                    <span class="calc-radio-label"
+                      >Instagram, Facebook, TikTok, Google</span
+                    >
                     <span class="calc-radio-price">$950/mo</span>
                   </span>
                 </label>
               </div>
-
             </div>
           </div>
-
-        </div><!-- /calc-form-col -->
+        </div>
+        <!-- /calc-form-col -->
 
         <!-- RIGHT: RESULTS PANEL -->
         <div class="calc-results-col">
@@ -416,15 +718,21 @@
             <div class="calc-subtotals">
               <div class="calc-subtotal-row">
                 <span class="calc-subtotal-label">Content Production</span>
-                <span class="calc-subtotal-value" id="subtotal-production">$0</span>
+                <span class="calc-subtotal-value" id="subtotal-production"
+                  >$0</span
+                >
               </div>
               <div class="calc-subtotal-row">
                 <span class="calc-subtotal-label">Content Strategy</span>
-                <span class="calc-subtotal-value" id="subtotal-strategy">$0/mo</span>
+                <span class="calc-subtotal-value" id="subtotal-strategy"
+                  >$0/mo</span
+                >
               </div>
               <div class="calc-subtotal-row">
                 <span class="calc-subtotal-label">Ad Management</span>
-                <span class="calc-subtotal-value" id="subtotal-admanage">$0/mo</span>
+                <span class="calc-subtotal-value" id="subtotal-admanage"
+                  >$0/mo</span
+                >
               </div>
               <div class="calc-subtotal-row">
                 <span class="calc-subtotal-label">Social Media Mgmt</span>
@@ -439,43 +747,73 @@
               <span class="calc-total-value" id="media-total-onetime">$0</span>
             </div>
 
-            <div style="height:8px;"></div>
+            <div style="height: 8px"></div>
 
             <div class="calc-total-row">
               <span class="calc-total-label">Monthly services</span>
-              <span class="calc-total-value" id="media-total-monthly">$0/mo</span>
+              <span class="calc-total-value" id="media-total-monthly"
+                >$0/mo</span
+              >
             </div>
 
-            <p class="calc-tax-note">Tax not included. Final pricing confirmed on consultation.</p>
+            <p class="calc-tax-note">
+              Tax not included. Final pricing confirmed on consultation.
+            </p>
 
             <a href="/#Get-in-touch" class="calc-cta">
               <span class="calc-cta-inner">Request a Proposal</span>
             </a>
           </div>
 
-          <p style="color:#555;font-size:12px;font-weight:300;margin-top:14px;text-align:center;font-family:Anek Malayalam,sans-serif;">
-            All prices are estimates. We'll confirm details on a free discovery call.
+          <p
+            style="
+              color: #555;
+              font-size: 12px;
+              font-weight: 300;
+              margin-top: 14px;
+              text-align: center;
+              font-family:
+                Anek Malayalam,
+                sans-serif;
+            "
+          >
+            All prices are estimates. We'll confirm details on a free discovery
+            call.
           </p>
 
-          <div style="margin-top:16px;text-align:center;">
-            <a href="calculator.html" style="color:#ff6f4c;font-size:13px;font-weight:300;font-family:Anek Malayalam,sans-serif;">
+          <div style="margin-top: 16px; text-align: center">
+            <a
+              href="calculator.html"
+              style="
+                color: #ff6f4c;
+                font-size: 13px;
+                font-weight: 300;
+                font-family:
+                  Anek Malayalam,
+                  sans-serif;
+              "
+            >
               &#8592; Looking for web &amp; digital services pricing?
             </a>
           </div>
         </div>
-
-      </div><!-- /calc-layout -->
+      </div>
+      <!-- /calc-layout -->
 
       <!-- MOBILE TOTAL BAR -->
       <div class="calc-mobile-bar">
         <div class="calc-mobile-bar-row">
           <div>
             <div class="calc-mobile-total-label">Production</div>
-            <div class="calc-mobile-total-value" id="media-mobile-onetime">$0</div>
+            <div class="calc-mobile-total-value" id="media-mobile-onetime">
+              $0
+            </div>
           </div>
           <div>
             <div class="calc-mobile-total-label">Monthly</div>
-            <div class="calc-mobile-total-value" id="media-mobile-monthly">$0/mo</div>
+            <div class="calc-mobile-total-value" id="media-mobile-monthly">
+              $0/mo
+            </div>
           </div>
           <a href="/#Get-in-touch" class="calc-mobile-cta">
             <span class="calc-mobile-cta-inner">Get Proposal</span>
@@ -484,18 +822,22 @@
       </div>
 
       <!-- FOOTER -->
-      <div style="margin-top: 100px;">
+      <div style="margin-top: 100px">
         <div class="footer-wrapper">
           <div class="footer-container">
-            <a href="/" title="Return to Main Page" class="home footer w-inline-block">
+            <a
+              href="/"
+              title="Return to Main Page"
+              class="home footer w-inline-block"
+            >
               <div>Luxit <span class="site-name-text-span">Digital</span></div>
             </a>
             <div>Copyright &copy; Luxit Digital</div>
           </div>
         </div>
       </div>
-
-    </div><!-- /page-wrapper -->
+    </div>
+    <!-- /page-wrapper -->
 
     <script type="text/javascript">
       /* =============================================
@@ -505,28 +847,37 @@
       // Pricing constants
       var MEDIA_PRICE = {
         production: {
-          filming: 220,     // per hour
-          videoEdit: 170,   // per clip
-          photoShoot: 120,  // per hour
-          photoEdit: 80,    // per photo
-          aiVideo: 320,     // per asset
-          story: 15         // per story
+          filming: 220, // per hour
+          videoEdit: 170, // per clip
+          photoShoot: 120, // per hour
+          photoEdit: 80, // per photo
+          aiVideo: 320, // per asset
+          story: 15, // per story
         },
         strategy: {
-          none: 0, pkg8: 450, pkg12: 680, pkg16: 900, pkg24: 1350
+          none: 0,
+          pkg8: 450,
+          pkg12: 680,
+          pkg16: 900,
+          pkg24: 1350,
         },
         adPlatforms: {
-          none: 0, google: 0, meta: 0,
-          'google-meta': 350,
-          all: 700
+          none: 0,
+          google: 0,
+          meta: 0,
+          "google-meta": 350,
+          all: 700,
         },
         smm: {
-          none: 0, one: 450, two: 700, three: 950
-        }
+          none: 0,
+          one: 450,
+          two: 700,
+          three: 950,
+        },
       };
 
       function fmtDollars(n) {
-        return '$' + Math.round(n).toLocaleString('en-US');
+        return "$" + Math.round(n).toLocaleString("en-US");
       }
 
       function getRadioValue(name) {
@@ -536,7 +887,7 @@
 
       function toggleSection(id) {
         var sec = document.getElementById(id);
-        sec.classList.toggle('open');
+        sec.classList.toggle("open");
       }
 
       function updateSlider(el, valId, formatter) {
@@ -546,7 +897,7 @@
         var min = parseFloat(el.min);
         var max = parseFloat(el.max);
         var pct = ((parseFloat(val) - min) / (max - min)) * 100;
-        el.style.setProperty('--fill', pct + '%');
+        el.style.setProperty("--fill", pct + "%");
       }
 
       function calcAdMgmtFee(budget) {
@@ -554,19 +905,25 @@
         var fee = 0;
         var tier1 = Math.min(budget, 4000);
         var tier2 = Math.max(0, budget - 4000);
-        fee += tier1 * 0.20;
+        fee += tier1 * 0.2;
         fee += tier2 * 0.15;
         return fee;
       }
 
       function mediaRecalc() {
         // Production (one-time)
-        var filming = parseInt(document.getElementById('filming-slider').value) || 0;
-        var videoEdit = parseInt(document.getElementById('videoedit-slider').value) || 0;
-        var photoShoot = parseInt(document.getElementById('photoshoot-slider').value) || 0;
-        var photoEdit = parseInt(document.getElementById('photoedit-slider').value) || 0;
-        var aiVideo = parseInt(document.getElementById('aivideo-slider').value) || 0;
-        var stories = parseInt(document.getElementById('stories-slider').value) || 0;
+        var filming =
+          parseInt(document.getElementById("filming-slider").value) || 0;
+        var videoEdit =
+          parseInt(document.getElementById("videoedit-slider").value) || 0;
+        var photoShoot =
+          parseInt(document.getElementById("photoshoot-slider").value) || 0;
+        var photoEdit =
+          parseInt(document.getElementById("photoedit-slider").value) || 0;
+        var aiVideo =
+          parseInt(document.getElementById("aivideo-slider").value) || 0;
+        var stories =
+          parseInt(document.getElementById("stories-slider").value) || 0;
 
         var production =
           filming * MEDIA_PRICE.production.filming +
@@ -577,58 +934,73 @@
           stories * MEDIA_PRICE.production.story;
 
         // Strategy (monthly)
-        var strategyKey = getRadioValue('strategy-pkg') || 'none';
+        var strategyKey = getRadioValue("strategy-pkg") || "none";
         var strategy = MEDIA_PRICE.strategy[strategyKey] || 0;
 
         // Ad Management (monthly)
-        var adBudget = parseFloat(document.getElementById('mediabudget-slider').value) || 0;
-        var adPlatformKey = getRadioValue('ad-platforms') || 'none';
+        var adBudget =
+          parseFloat(document.getElementById("mediabudget-slider").value) || 0;
+        var adPlatformKey = getRadioValue("ad-platforms") || "none";
         var adManagement = 0;
-        if (adPlatformKey !== 'none') {
-          adManagement = calcAdMgmtFee(adBudget) + (MEDIA_PRICE.adPlatforms[adPlatformKey] || 0);
+        if (adPlatformKey !== "none") {
+          adManagement =
+            calcAdMgmtFee(adBudget) +
+            (MEDIA_PRICE.adPlatforms[adPlatformKey] || 0);
         }
 
         // Social Media Management (monthly)
-        var smmKey = getRadioValue('smm-platforms') || 'none';
+        var smmKey = getRadioValue("smm-platforms") || "none";
         var smm = MEDIA_PRICE.smm[smmKey] || 0;
 
         var totalMonthly = strategy + adManagement + smm;
 
         // Update subtotals
-        document.getElementById('subtotal-production').textContent = fmtDollars(production);
-        document.getElementById('subtotal-strategy').textContent = fmtDollars(strategy) + '/mo';
-        document.getElementById('subtotal-admanage').textContent = fmtDollars(adManagement) + '/mo';
-        document.getElementById('subtotal-smm').textContent = fmtDollars(smm) + '/mo';
+        document.getElementById("subtotal-production").textContent =
+          fmtDollars(production);
+        document.getElementById("subtotal-strategy").textContent =
+          fmtDollars(strategy) + "/mo";
+        document.getElementById("subtotal-admanage").textContent =
+          fmtDollars(adManagement) + "/mo";
+        document.getElementById("subtotal-smm").textContent =
+          fmtDollars(smm) + "/mo";
 
         // Update totals
-        document.getElementById('media-total-onetime').textContent = fmtDollars(production);
-        document.getElementById('media-total-monthly').textContent = fmtDollars(totalMonthly) + '/mo';
-        document.getElementById('media-mobile-onetime').textContent = fmtDollars(production);
-        document.getElementById('media-mobile-monthly').textContent = fmtDollars(totalMonthly) + '/mo';
+        document.getElementById("media-total-onetime").textContent =
+          fmtDollars(production);
+        document.getElementById("media-total-monthly").textContent =
+          fmtDollars(totalMonthly) + "/mo";
+        document.getElementById("media-mobile-onetime").textContent =
+          fmtDollars(production);
+        document.getElementById("media-mobile-monthly").textContent =
+          fmtDollars(totalMonthly) + "/mo";
       }
 
       // Mobile hamburger menu
-      document.getElementById('media-burger').addEventListener('click', function() {
-        var menu = document.querySelector('.nav-menu');
-        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        menu.style.flexDirection = 'column';
-        menu.style.position = 'fixed';
-        menu.style.top = '65px';
-        menu.style.left = '0';
-        menu.style.right = '0';
-        menu.style.background = 'rgba(20,21,32,0.98)';
-        menu.style.padding = '20px 5vw';
-        menu.style.zIndex = '998';
-        menu.style.gap = '16px';
-      });
+      document
+        .getElementById("media-burger")
+        .addEventListener("click", function () {
+          var menu = document.querySelector(".nav-menu");
+          menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+          menu.style.flexDirection = "column";
+          menu.style.position = "fixed";
+          menu.style.top = "65px";
+          menu.style.left = "0";
+          menu.style.right = "0";
+          menu.style.background = "rgba(20,21,32,0.98)";
+          menu.style.padding = "20px 5vw";
+          menu.style.zIndex = "998";
+          menu.style.gap = "16px";
+        });
 
       // Init sliders fill
-      document.querySelectorAll('input[type="range"].calc-slider').forEach(function(el) {
-        var min = parseFloat(el.min);
-        var max = parseFloat(el.max);
-        var pct = ((parseFloat(el.value) - min) / (max - min)) * 100;
-        el.style.setProperty('--fill', pct + '%');
-      });
+      document
+        .querySelectorAll('input[type="range"].calc-slider')
+        .forEach(function (el) {
+          var min = parseFloat(el.min);
+          var max = parseFloat(el.max);
+          var pct = ((parseFloat(el.value) - min) / (max - min)) * 100;
+          el.style.setProperty("--fill", pct + "%");
+        });
 
       mediaRecalc();
     </script>
