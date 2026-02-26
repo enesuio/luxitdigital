@@ -4167,7 +4167,7 @@ strong {
   color: #c2c2c2;
   font-size: 13px;
   font-weight: 400;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 0.07em;
   margin-bottom: 14px;
   margin-top: 26px;
