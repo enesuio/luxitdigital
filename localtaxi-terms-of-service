@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Terms of Service — Local Taxi</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      name="description"
+      content="Terms of Service for the Local Taxi platform. Learn the rules, responsibilities, and conditions for using Local Taxi."
+    />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      WebFont.load({ google: { families: ["Anek Malayalam:100,200,300,regular,500,600,700,800"] } });
+    </script>
+    <link
+      href="https://cdn.prod.website-files.com/658388b7514ee2b319ea06cc/6636bbf275521e23c9fe9d77_favicon-32x32.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.prod.website-files.com/658388b7514ee2b319ea06cc/6636cc6f9ae2bec8b5d2a6af_luxit_logo.png"
+      rel="apple-touch-icon"
+    />
+    <style>
+      .pp-wrapper {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 80px 5vw 140px;
+      }
+
+      .pp-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: #666;
+        font-size: 13px;
+        font-weight: 300;
+        font-family: Anek Malayalam, sans-serif;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+
+      .pp-eyebrow::before {
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .pp-title {
+        font-size: 42px;
+        font-weight: 300;
+        color: #fff;
+        font-family: Anek Malayalam, sans-serif;
+        line-height: 1.2em;
+        margin-bottom: 10px;
+      }
+
+      .pp-title span {
+        color: #ff6f4c;
+      }
+
+      .pp-meta {
+        color: #555;
+        font-size: 13px;
+        font-weight: 300;
+        font-family: Anek Malayalam, sans-serif;
+        margin-bottom: 56px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .pp-section {
+        margin-bottom: 44px;
+      }
+
+      .pp-section-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+        font-family: Anek Malayalam, sans-serif;
+        margin-bottom: 16px;
+        padding-left: 14px;
+        border-left: 2px solid #ff6f4c;
+        line-height: 1.3em;
+      }
+
+      .pp-subsection-title {
+        font-size: 15px;
+        font-weight: 500;
+        color: #e2e2e2;
+        font-family: Anek Malayalam, sans-serif;
+        margin-bottom: 10px;
+        margin-top: 22px;
+      }
+
+      .pp-body {
+        color: #999;
+        font-size: 15px;
+        font-weight: 300;
+        font-family: Anek Malayalam, sans-serif;
+        line-height: 1.8em;
+        margin-bottom: 12px;
+      }
+
+      .pp-list {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .pp-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        color: #999;
+        font-size: 15px;
+        font-weight: 300;
+        font-family: Anek Malayalam, sans-serif;
+        line-height: 1.6em;
+      }
+
+      .pp-list li::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        background: linear-gradient(135deg, #ff6f4c, #4454fe);
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-top: 8px;
+      }
+
+      .pp-divider {
+        height: 1px;
+        background: rgba(255, 255, 255, 0.06);
+        margin: 44px 0;
+      }
+
+      .pp-contact-box {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 28px 32px;
+        margin-top: 16px;
+      }
+
+      .pp-contact-box a {
+        color: #ff6f4c;
+        text-decoration: none;
+        font-family: Anek Malayalam, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        transition: color 0.2s;
+      }
+
+      .pp-contact-box a:hover {
+        color: #fff;
+      }
+
+      .navbar {
+        padding-top: 22px;
+        padding-bottom: 22px;
+      }
+
+      @media (max-width: 767px) {
+        .navbar {
+          padding-top: 18px;
+          padding-bottom: 18px;
+        }
+
+        .pp-title {
+          font-size: 30px;
+        }
+
+        .pp-wrapper {
+          padding-top: 52px;
+        }
+
+        .pp-contact-box {
+          padding: 22px 20px;
+        }
+      }
+
+      @media (max-width: 479px) {
+        .pp-title {
+          font-size: 26px;
+        }
+
+        .pp-section-title {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body class="body-1">
+    <div class="page-wrapper">
+
+      <!-- NAVBAR (logo only) -->
+      <div role="banner" class="navbar w-nav">
+        <div class="navigation-wrapper">
+          <div class="navigation-container">
+            <div class="home w-inline-block">
+              <div>Luxit <span class="site-name-text-span">Digital</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BACKGROUND GLOW -->
+      <div class="section-wrapper glow-2" style="padding-bottom:0;">
+        <div class="pp-wrapper">
+
+          <!-- HEADER -->
+          <div class="pp-eyebrow">Terms of Service</div>
+          <h1 class="pp-title">Local <span>Taxi</span></h1>
+          <p class="pp-meta">Last updated: March 2026</p>
+
+          <p class="pp-body">
+            These Terms of Service ("Terms") govern your access to and use of the Local Taxi platform, including any related mobile applications, websites, and services (collectively, the "Service"). By accessing or using the Service, you agree to be bound by these Terms.
+          </p>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 1 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">Overview of the Service</h2>
+            <p class="pp-body">
+              Local Taxi is a technology platform provided by Luxit Digital that helps connect passengers with independent drivers or transportation operators for pre-arranged rides.
+            </p>
+            <p class="pp-body">
+              Luxit Digital does not directly provide transportation services. Drivers using the platform are independent parties and are not employees, agents, joint venturers, or representatives of Luxit Digital.
+            </p>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 2 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">Eligibility</h2>
+            <p class="pp-body">To use the Service, you must:</p>
+            <ul class="pp-list">
+              <li>Be at least 18 years old</li>
+              <li>Have the legal capacity to enter into binding agreements</li>
+              <li>Provide accurate, current, and complete information</li>
+            </ul>
+            <p class="pp-body">
+              By using the Service, you represent and warrant that you meet these requirements.
+            </p>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 3 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">User Accounts</h2>
+            <p class="pp-body">
+              Certain features of the Service may require you to create an account. You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account.
+            </p>
+            <p class="pp-body">You agree to:</p>
+            <ul class="pp-list">
+              <li>Use accurate information when creating your account</li>
+              <li>Keep your login details secure</li>
+              <li>Notify us promptly of any unauthorized use of your account</li>
+            </ul>
+            <p class="pp-body">
+              We reserve the right to suspend or terminate accounts that violate these Terms or misuse the Service.
+            </p>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 4 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">Ride Requests and Bookings</h2>
+            <p class="pp-body">
+              All rides on Local Taxi are intended to be pre-arranged through the platform. Ride availability depends on the presence and acceptance of independent drivers.
+            </p>
+            <p class="pp-body">You understand and agree that:</p>
+            <ul class="pp-list">
+              <li>Submitting a ride request does not guarantee that a driver will accept it</li>
+              <li>Estimated pickup times, routes, and arrival times are approximate only</li>
+              <li>Drivers may accept, reject, cancel, or fail to complete a ride request</li>
+            </ul>
+            <p class="pp-body">
+              Luxit Digital is not responsible for delays, missed pickups, driver availability, or the quality of transportation services provided by independent drivers.
+            </p>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 5 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">Payments and Fees</h2>
+            <p class="pp-body">
+              Fares, fees, and any applicable charges may be displayed through the platform or handled externally depending on how the service is configured.
+            </p>
+            <p class="pp-body">By using the Service, you agree to:</p>
+            <ul class="pp-list">
+              <li>Pay all applicable fares, fees, and charges associated with your rides</li>
+              <li>Provide valid payment information where required</li>
+              <li>Accept that pricing may vary based on distance, duration, location, or service conditions</li>
+            </ul>
+            <p class="pp-body">
+              Unless otherwise required by law, payments are non-refundable once a ride or chargeable service has been provided.
+            </p>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 6 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">User Conduct</h2>
+            <p class="pp-body">
+              You agree to use the Service lawfully, respectfully, and in a way that does not harm others or interfere with the platform.
+            </p>
+            <p class="pp-body">Prohibited conduct includes, without limitation:</p>
+            <ul class="pp-list">
+              <li>Providing false, misleading, or fraudulent information</li>
+              <li>Harassing, threatening, or abusing drivers, passengers, or support personnel</li>
+              <li>Damaging vehicles, devices, or other property</li>
+              <li>Using the Service for illegal purposes</li>
+              <li>Attempting to interfere with or compromise the platform's security or operation</li>
+            </ul>
+            <p class="pp-body">
+              We may suspend or permanently terminate access to the Service for conduct that violates these Terms.
+            </p>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 7 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">Independent Drivers</h2>
+            <p class="pp-body">
+              Drivers available through Local Taxi operate independently. Luxit Digital does not control and is not responsible for how drivers perform transportation services, maintain their vehicles, obtain licensing, carry insurance, or comply with applicable transportation laws.
+            </p>
+            <p class="pp-body">
+              Any transportation service you receive is provided by the driver, not by Luxit Digital.
+            </p>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 8 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">No Guarantee of Availability</h2>
+            <p class="pp-body">
+              The Service is provided on an "as is" and "as available" basis. We do not guarantee that the platform will always be available, uninterrupted, secure, or error-free.
+            </p>
+            <p class="pp-body">We do not guarantee:</p>
+            <ul class="pp-list">
+              <li>Continuous access to the app or website</li>
+              <li>That ride requests will be accepted</li>
+              <li>That notifications, location tracking, or other features will always function without interruption</li>
+            </ul>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 9 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">Safety and Responsibility</h2>
+            <p class="pp-body">
+              Users are responsible for their own conduct and decisions while using the Service. Passengers and drivers are expected to comply with all applicable laws, safety requirements, and common-sense precautions.
+            </p>
+            <p class="pp-body">
+              While we may implement certain platform safeguards, Luxit Digital does not guarantee the behavior, identity, suitability, or safety of any user of the Service.
+            </p>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 10 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">Limitation of Liability</h2>
+            <p class="pp-body">
+              To the maximum extent permitted by law, Luxit Digital and its operators, affiliates, and service providers will not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Service.
+            </p>
+            <p class="pp-body">
+              This includes, without limitation, damages related to personal injury, property damage, missed rides, lost profits, lost data, service interruptions, or the acts or omissions of passengers, drivers, or third parties.
+            </p>
+            <p class="pp-body">
+              To the extent we are found liable for any claim, our total aggregate liability will not exceed the greater of:
+            </p>
+            <ul class="pp-list">
+              <li>The amount you paid to us through the Service in the 30 days before the event giving rise to the claim</li>
+              <li>100 CAD</li>
+            </ul>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 11 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">Intellectual Property</h2>
+            <p class="pp-body">
+              The Local Taxi platform, including its software, branding, visual content, text, interfaces, and related materials, is owned by or licensed to Luxit Digital and is protected by applicable intellectual property laws.
+            </p>
+            <p class="pp-body">You may not:</p>
+            <ul class="pp-list">
+              <li>Copy, reproduce, distribute, or publicly display the platform except as permitted by law</li>
+              <li>Modify, reverse engineer, decompile, or attempt to extract source code from the Service</li>
+              <li>Use our trademarks, branding, or content without prior written permission</li>
+            </ul>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 12 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">Privacy</h2>
+            <p class="pp-body">
+              Your use of the Service is also subject to our Privacy Policy, which explains how we collect, use, and protect your information.
+            </p>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 13 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">Termination</h2>
+            <p class="pp-body">
+              We may suspend or terminate your access to the Service at any time, with or without notice, if we believe you have violated these Terms, misused the platform, created risk for other users, or if termination is required for legal or operational reasons.
+            </p>
+            <p class="pp-body">
+              You may stop using the Service at any time. Any provisions that by their nature should survive termination will continue to apply after access ends.
+            </p>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 14 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">Changes to These Terms</h2>
+            <p class="pp-body">
+              We may update these Terms from time to time. When we do, the revised version will be posted on our website or within the app with an updated "Last updated" date.
+            </p>
+            <p class="pp-body">
+              Continued use of the Service after updated Terms are posted constitutes your acceptance of the revised Terms.
+            </p>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 15 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">Governing Law</h2>
+            <p class="pp-body">
+              These Terms are governed by the laws of the Province of Ontario and the applicable federal laws of Canada, without regard to conflict of law principles.
+            </p>
+          </div>
+
+          <div class="pp-divider"></div>
+
+          <!-- SECTION 16 -->
+          <div class="pp-section">
+            <h2 class="pp-section-title">Contact</h2>
+            <p class="pp-body">
+              If you have questions about these Terms of Service, please contact us:
+            </p>
+            <div class="pp-contact-box">
+              <p class="pp-body" style="margin-bottom:0;">
+                Email: <a href="mailto:localtaxi@luxit.digital">localtaxi@luxit.digital</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div>
+        <div class="footer-wrapper">
+          <div class="footer-container">
+            <div class="home footer w-inline-block">
+              <div>Luxit <span class="site-name-text-span">Digital</span></div>
+            </div>
+            <div>Copyright &copy; Luxit Digital</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-wrapper -->
+  </body>
+</html>
